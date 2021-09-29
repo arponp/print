@@ -10,24 +10,7 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URI;
 
-class IppPrinter {
-
-public static void main(final String[] args) {
- try {
-   URI uri = new URI("ipp://localhost:8632/printers/laser");
-   File file = new File("demo/A4-blank.pdf");
-   if (args.length > 0) {
-     uri = new URI(args[0]);
-   }
-   if (args.length > 1) {
-     file = new File(args[1]);
-   }
-   new IppPrinter(uri).printJob(file);
-
- } catch (Exception exception) {
-   exception.printStackTrace(System.err);
- }
-}
+public class IppPrinter {
 
 private URI uri;
 private DataOutputStream dataOutputStream;
