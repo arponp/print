@@ -10,7 +10,8 @@ public class Main {
 		File f = new File("test.pdf");
 		URI u = new URI("http://localhost:631/printers/Brother_MFC_J775DW");
 		Print p  = new Print(f,u);
-		p.print();
+		boolean success = p.print();
+		System.out.println(success);
 	}
 
 }

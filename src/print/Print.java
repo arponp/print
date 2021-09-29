@@ -35,12 +35,14 @@ public class Print {
 	
 	// methods
 	
-	public void print() {
+	public boolean print() {
 		try { 
 			IppPrinter printer = new IppPrinter(uri);
 			printer.printJob(file);
+			return true;
 		} catch (IOException e) {
 			e.printStackTrace();
+			return false;
 		}
 	}
 }
